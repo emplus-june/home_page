@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moments - Digital Photo Frame</title>
+    <meta name="description" content="Moments - Turn your device into a beautiful digital photo frame with cinematic slideshow effects, background music, and family photo sharing.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #0F172A;
+            background: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 24px;
+            background: linear-gradient(135deg, #EBF4FF 0%, #F0F7FF 50%, #FFF 100%);
+        }
+        .hero-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 28px;
+            margin-bottom: 32px;
+            box-shadow: 0 20px 60px rgba(26, 115, 232, 0.15);
+        }
+        .hero h1 {
+            font-family: 'Georgia', serif;
+            font-size: 56px;
+            font-weight: 400;
+            letter-spacing: -2px;
+            color: #0F172A;
+            margin-bottom: 16px;
+        }
+        .hero .tagline {
+            font-size: 20px;
+            color: #64748B;
+            max-width: 500px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        .hero .badge {
+            display: inline-block;
+            margin: 8px;
+        }
+        .hero .badge img {
+            height: 56px;
+        }
+
+        /* Features */
+        .features {
+            padding: 80px 24px;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+        .features h2 {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 48px;
+            color: #0F172A;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+        .feature-card {
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 20px;
+            padding: 32px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+        }
+        .feature-icon {
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+        .feature-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #0F172A;
+        }
+        .feature-card p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #64748B;
+        }
+
+        /* Music */
+        .music {
+            padding: 60px 24px;
+            background: #0F172A;
+            text-align: center;
+        }
+        .music h2 {
+            font-size: 28px;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+        .music p {
+            font-size: 16px;
+            color: #94A3B8;
+            max-width: 500px;
+            margin: 0 auto 32px;
+            line-height: 1.6;
+        }
+        .music-note {
+            display: inline-block;
+            background: rgba(26, 115, 232, 0.15);
+            border: 1px solid rgba(26, 115, 232, 0.3);
+            border-radius: 12px;
+            padding: 12px 20px;
+            margin: 4px;
+            color: #93C5FD;
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 24px;
+            text-align: center;
+            border-top: 1px solid #E2E8F0;
+        }
+        footer .company {
+            font-size: 16px;
+            font-weight: 600;
+            color: #0F172A;
+            margin-bottom: 12px;
+        }
+        footer .links {
+            margin-bottom: 16px;
+        }
+        footer .links a {
+            font-size: 14px;
+            color: #1A73E8;
+            text-decoration: none;
+            margin: 0 12px;
+        }
+        footer .links a:hover {
+            text-decoration: underline;
+        }
+        footer .copyright {
+            font-size: 13px;
+            color: #94A3B8;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 40px; }
+            .hero .tagline { font-size: 17px; }
+            .features h2 { font-size: 26px; }
+            .feature-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hero -->
+<section class="hero">
+    <img src="app_icon.png" alt="Moments App Icon" class="hero-icon">
+    <h1>Moments</h1>
+    <p class="tagline">Turn your device into a beautiful digital photo frame with cinematic effects and background music.</p>
+    <div>
+        <a href="https://play.google.com/store/apps/details?id=com.weeti.dpf" class="badge">
+            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+        </a>
+    </div>
+</section>
+
+<!-- Features -->
+<section class="features">
+    <h2>Features</h2>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="feature-icon">&#127912;</div>
+            <h3>Cinematic Effects</h3>
+            <p>7 slideshow effects including AI-powered Ken Burns with face detection, zoom, vignette fade, and more.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">&#10024;</div>
+            <h3>Smooth Transitions</h3>
+            <p>13 transition effects - fade, slide, wipe, circle wipe - for seamless photo changes.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">&#127925;</div>
+            <h3>Background Music</h3>
+            <p>Play your own music or choose from built-in free tracks. Create playlists for the perfect ambiance.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">&#128106;</div>
+            <h3>Family Sharing</h3>
+            <p>Share a code with family. They can send photos to your frame from anywhere, appearing in real-time.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">&#128337;</div>
+            <h3>Clock & Date</h3>
+            <p>Display time and date on your slideshow. Customize position, size, and color to match your style.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">&#127763;</div>
+            <h3>Smart Brightness</h3>
+            <p>Auto-adjust brightness with ambient sensor, schedule night mode, or set manually. Saves battery too.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Music -->
+<section class="music">
+    <h2>Built-in Background Music</h2>
+    <p>7 royalty-free tracks included. No downloads needed - just select and play.</p>
+    <div>
+        <span class="music-note">Fall In Love</span>
+        <span class="music-note">One Love</span>
+        <span class="music-note">Adrift Among Infinite Stars</span>
+        <span class="music-note">Horizon</span>
+        <span class="music-note">Puzzle</span>
+        <span class="music-note">Summer Madness</span>
+        <span class="music-note">Lovely Day</span>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p class="company">Weeti Inc.</p>
+    <div class="links">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="mailto:support@weeti.kr">Contact</a>
+    </div>
+    <p class="copyright">&copy; 2026 Weeti Inc. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
